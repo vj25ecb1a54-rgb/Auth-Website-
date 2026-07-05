@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Authentication Portal</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="auth-container">
+        <div class="logo-container">
+            <div class="app-logo">
+                <div class="logo-inner"></div>
+            </div>
+            <h2>QuantumAuth</h2>
+        </div>
+
+        <div id="success-banner" class="success-banner hidden"></div>
+
+        <form id="login-form" class="auth-form" novalidate>
+            <h3>Welcome Back</h3>
+            <p class="form-subtitle">Please enter your details to sign in.</p>
+
+            <div class="input-group">
+                <label for="login-email">Email ID</label>
+                <input type="email" id="login-email" placeholder="name@domain.com">
+                <span class="error-msg" id="login-email-error"></span>
+            </div>
+
+            <div class="input-group">
+                <label for="login-password">Password (Numeric Only)</label>
+                <input type="password" id="login-password" placeholder="••••••••">
+                <span class="error-msg" id="login-password-error"></span>
+            </div>
+
+            <div class="form-actions">
+                <label class="checkbox-container">
+                    <input type="checkbox" id="remember-me">
+                    <span class="checkmark"></span>
+                    Remember Me
+                </label>
+                <a href="#" class="form-link">Forgot Password?</a>
+            </div>
+
+            <button type="submit" class="btn-submit">Sign In</button>
+
+            <p class="switch-form-text">
+                Don't have an account? <a href="#" id="to-register">Register here</a>
+            </p>
+        </form>
+
+        <form id="register-form" class="auth-form hidden" novalidate>
+            <h3>Create Account</h3>
+            <p class="form-subtitle">Join us by filling out the details below.</p>
+
+            <div class="input-group">
+                <label for="reg-name">Full Name</label>
+                <input type="text" id="reg-name" placeholder="John Doe">
+                <span class="error-msg" id="reg-name-error"></span>
+            </div>
+
+            <div class="input-group">
+                <label for="reg-email">Email ID</label>
+                <input type="email" id="reg-email" placeholder="name@domain.com">
+                <span class="error-msg" id="reg-email-error"></span>
+            </div>
+
+            <div class="input-group">
+                <label for="reg-phone">Phone Number</label>
+                <input type="tel" id="reg-phone" placeholder="10-digit number">
+                <span class="error-msg" id="reg-phone-error"></span>
+            </div>
+
+            <div class="input-group">
+                <label for="reg-password">Password (Numeric Only)</label>
+                <input type="password" id="reg-password" placeholder="••••••••">
+                <span class="error-msg" id="reg-password-error"></span>
+            </div>
+
+            <div class="input-group">
+                <label for="reg-confirm-password">Confirm Password</label>
+                <input type="password" id="reg-confirm-password" placeholder="••••••••">
+                <span class="error-msg" id="reg-confirm-password-error"></span>
+            </div>
+
+            <button type="submit" class="btn-submit">Register</button>
+
+            <p class="switch-form-text">
+                Already have an account? <a href="#" id="to-login">Login here</a>
+            </p>
+        </form>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
